@@ -52,3 +52,60 @@ The API uses JWT Authentication.
 
 ### Usage:
 Add token in Authorization header:
+
+---
+
+## 📁 File Upload Feature
+
+- Upload attachments for tasks
+- Server-side validation
+- Secure file handling
+
+---
+
+## 📌 API Endpoints
+
+### Auth
+- POST `/api/accounts/register`
+- POST `/api/accounts/login`
+
+### Tasks
+- GET `/api/tasks`
+- GET `/api/tasks/{id}`
+- POST `/api/tasks`
+- PUT `/api/tasks/{id}`
+- DELETE `/api/tasks/{id}`
+
+---
+
+## 🧪 Testing Tools
+
+- Swagger UI
+- Postman Collection
+
+---
+
+## 📷 Screenshots (Optional)
+
+Add screenshots like:
+- Swagger UI
+- Login request
+- Create task response
+
+---
+
+## 👨‍💻 Author
+
+**Ahmed Saeed Reiyd**  
+Full-Stack .NET Developer  
+GitHub: https://github.com/ahmedsaeeddev5-alt  
+
+---
+
+## ⭐ Notes
+
+This project demonstrates:
+- Real-world backend API development
+- Secure authentication & authorization
+- Scalable architecture using CQRS
+- Clean and maintainable code structure
