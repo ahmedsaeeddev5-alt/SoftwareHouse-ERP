@@ -203,16 +203,16 @@ Interactive API documentation available via Swagger:
 
 ---
 
-### 🔹 File Upload
+### 🔹 JWT Token
 <p align="center">
-  <img src="Screenshots/upload-file.png" width="900" alt="File Upload"/>
+  <img src="Screenshots/JWT Token.png" width="900" alt="File Upload"/>
 </p>
 
 ---
 
-### 🔹 SQL Server Database
+### 🔹 get by id task
 <p align="center">
-  <img src="Screenshots/database.png" width="900" alt="Database"/>
+  <img src="Screenshots/get by id.png" width="900" alt="Database"/>
 </p>
 
 ---
