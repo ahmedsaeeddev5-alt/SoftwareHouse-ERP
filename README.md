@@ -150,6 +150,72 @@ Interactive API documentation available via Swagger:
 - Manual API testing for validation
 
 ---
+---
+
+## 📸 Screenshots
+
+### 🔹 Swagger UI
+<p align="center">
+  <img src="Screenshots/swagger-home.png" width="900" alt="Swagger UI"/>
+</p>
+
+---
+
+### 🔹 User Registration
+<p align="center">
+  <img src="Screenshots/register.png" width="900" alt="User Registration"/>
+</p>
+
+---
+
+### 🔹 User Login (JWT Token)
+<p align="center">
+  <img src="Screenshots/login.png" width="900" alt="User Login"/>
+</p>
+
+---
+
+### 🔹 Get All Tasks
+<p align="center">
+  <img src="Screenshots/get-all-tasks.png" width="900" alt="Get All Tasks"/>
+</p>
+
+---
+
+### 🔹 Create Task
+<p align="center">
+  <img src="Screenshots/create-task.png" width="900" alt="Create Task"/>
+</p>
+
+---
+
+### 🔹 Update Task
+<p align="center">
+  <img src="Screenshots/update-task.png" width="900" alt="Update Task"/>
+</p>
+
+---
+
+### 🔹 Delete Task
+<p align="center">
+  <img src="Screenshots/delete-task.png" width="900" alt="Delete Task"/>
+</p>
+
+---
+
+### 🔹 File Upload
+<p align="center">
+  <img src="Screenshots/upload-file.png" width="900" alt="File Upload"/>
+</p>
+
+---
+
+### 🔹 SQL Server Database
+<p align="center">
+  <img src="Screenshots/database.png" width="900" alt="Database"/>
+</p>
+
+---
 
 ## 🎯 What This Project Demonstrates
 
