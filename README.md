@@ -1,250 +1,591 @@
-<h1 align="center">📌 Task Management API</h1>
+# 🏢 Software House ERP
 
-<p align="center">
-A secure, scalable, and production-style <b>RESTful API</b> built with ASP.NET Core Web API following Clean Architecture and CQRS principles.
-</p>
+> A modern full-stack Enterprise Resource Planning (ERP) system designed to manage employees, clients, projects, tasks, finance, attendance, leave requests, contracts, invoices, payments, and expenses.
 
-<p align="center">
-  <img src="https://img.shields.io/badge/.NET-Core-512BD4?style=for-the-badge&logo=dotnet&logoColor=white"/>
-  <img src="https://img.shields.io/badge/Web%20API-ASP.NET-5C2D91?style=for-the-badge"/>
-  <img src="https://img.shields.io/badge/JWT-Security-black?style=for-the-badge"/>
-  <img src="https://img.shields.io/badge/CQRS-MediatR-green?style=for-the-badge"/>
-</p>
+**Software House ERP** is a portfolio-grade business management application built with **ASP.NET Core Web API** and **Angular**, following a clean and maintainable architecture with authentication, role-based authorization, CQRS, Entity Framework Core, and SQL Server.
 
 ---
 
-## 🚀 Overview
+## 📸 Screenshots
 
-The **Task Management API** is a backend-focused RESTful service designed to simulate real-world task management systems with secure authentication, role-based authorization, and scalable architecture.
+> Add your project screenshots here.
 
-It is built with a strong emphasis on:
-- Clean Architecture
-- Security best practices
-- Maintainability
-- Real-world backend design patterns
+### Dashboard
+
+![Dashboard](docs/screenshots/dashboard.png)
+
+### Employees
+
+![Employees](docs/screenshots/employees.png)
+
+### Projects
+
+![Projects](docs/screenshots/projects.png)
+
+### Tasks
+
+![Tasks](docs/screenshots/tasks.png)
+
+### Finance
+
+![Finance](docs/screenshots/finance.png)
 
 ---
 
 ## ✨ Key Features
 
 ### 🔐 Authentication & Authorization
-- User Registration & Login system
-- JWT Authentication with custom claims
-- Role-Based Authorization (Admin / User)
-- Secure access control per endpoint
 
-### 📌 Task Management
-- Full CRUD operations for tasks
-- User-specific task ownership validation
-- Task status tracking
-- Secure data access per user
+* User registration and login
+* ASP.NET Core Identity
+* JWT Authentication
+* Role-Based Authorization
+* Protected API endpoints
+* User-specific access control
+* Secure password management
 
-### 📎 File Management
-- Upload attachments for tasks
-- Server-side validation
-- Secure file handling and storage
+### 👥 Employee Management
 
-### 🧠 Backend Engineering Features
-- CQRS pattern using MediatR
-- Global exception handling middleware
-- Fluent validation & request validation
-- Logging system for debugging & monitoring
+* Create, update, view and delete employees
+* Employee profiles
+* Department assignment
+* Employee status management
+* Search and filtering
 
----
+### 🏢 Client Management
 
-## 🛠 Tech Stack
+* Client CRUD operations
+* Client contact information
+* Client status management
+* Client-project relationship
 
-**Backend**
-- ASP.NET Core Web API
-- C#
+### 📁 Project Management
 
-**Database**
-- SQL Server
-- Entity Framework Core
-- LINQ
+* Project creation and management
+* Assign projects to clients
+* Project status tracking
+* Start and end dates
+* Project details
+* Project-related tasks and milestones
 
-**Security**
-- ASP.NET Core Identity
-- JWT Authentication
+### ✅ Task Management
 
-**Architecture & Patterns**
-- CQRS (MediatR)
-- Repository Pattern
-- Clean Architecture
-- DTO-based API design
+* Create and manage tasks
+* Assign tasks to employees
+* Task status tracking
+* Priority management
+* Due dates
+* Project-based task organization
 
-**Tools**
-- Swagger / Swashbuckle
-- Postman
+### 🎯 Milestone Management
 
----
+* Project milestones
+* Start and due dates
+* Milestone status
+* Project progress tracking
 
-## 🧱 Architecture Overview
+### 🏬 Department Management
 
-The system is structured into clean layers:
+* Department CRUD
+* Employee department assignment
+* Department-based organization
 
-- 🏛 Presentation Layer (API Controllers)
-- 🧠 Application Layer (CQRS - Commands & Queries)
-- 🗄 Domain Layer (Entities & Core Logic)
-- 💾 Infrastructure Layer (Database & External Services)
+### 💰 Finance Management
 
-Key principles:
-- Separation of Concerns
-- Dependency Injection
-- SOLID Principles
-- Maintainable & testable structure
+The ERP includes several financial modules:
 
----
+* Contracts
+* Invoices
+* Payments
+* Expenses
+* Currency management
+* Payment status tracking
+* Expense categorization
+* Invoice-payment relationships
 
-## 🔐 Authentication Flow
+### 🕒 Attendance Management
 
-The API uses JWT-based authentication:
+* Employee attendance records
+* Check-in / Check-out
+* Attendance status
+* Attendance notes
+* Attendance history
 
-### Endpoints
-- `POST /api/accounts/register`
-- `POST /api/accounts/login`
+### 🌴 Leave Management
 
-### Usage Example
-After login, include token in request header:
+* Leave request creation
+* Employee leave requests
+* Leave types
+* Start and end dates
+* Approval status
+* Request reasons and notes
 
----
+### 📊 Reports & Dashboard
 
-## 📌 API Endpoints
-
-### 👤 Accounts
-- POST `/api/accounts/register`
-- POST `/api/accounts/login`
-
-### 📋 Tasks
-- GET `/api/tasks`
-- GET `/api/tasks/{id}`
-- POST `/api/tasks`
-- PUT `/api/tasks/{id}`
-- DELETE `/api/tasks/{id}`
-
----
-
-## 📎 File Upload Feature
-
-- Upload attachments per task
-- Validation for file type & size
-- Secure storage handling
-- Linked to task entity
+* Business overview
+* Project statistics
+* Employee statistics
+* Financial information
+* Visual data representation using charts
 
 ---
 
-## 📸 API Documentation
+# 🛠️ Tech Stack
 
-Interactive API documentation available via Swagger:
+## Backend
 
-- Swagger UI for testing endpoints
-- Request/Response models documentation
-- Easy Postman integration
+| Technology            | Purpose               |
+| --------------------- | --------------------- |
+| ASP.NET Core Web API  | RESTful API           |
+| C#                    | Backend development   |
+| Entity Framework Core | ORM / Database access |
+| SQL Server            | Relational database   |
+| ASP.NET Core Identity | User management       |
+| JWT                   | Authentication        |
+| MediatR               | CQRS implementation   |
+| AutoMapper            | Object mapping        |
+| LINQ                  | Data querying         |
+| Swagger / OpenAPI     | API documentation     |
 
----
+## Frontend
 
-## 🧪 Testing Tools
+| Technology        | Purpose                 |
+| ----------------- | ----------------------- |
+| Angular           | Frontend framework      |
+| TypeScript        | Frontend development    |
+| HTML5             | UI structure            |
+| CSS3              | Styling                 |
+| Bootstrap         | Responsive UI           |
+| Bootstrap Icons   | UI icons                |
+| Chart.js          | Data visualization      |
+| Reactive Forms    | Form management         |
+| HttpClient        | API communication       |
+| Route Guards      | Route protection        |
+| HTTP Interceptors | Authentication handling |
 
-- Swagger UI (built-in)
-- Postman collection support
-- Manual API testing for validation
+## Database
 
----
----
-
-## 📸 Screenshots
-
-### 🔹 Swagger UI
-<p align="center">
-  <img src="Screenshots/swagger-home.png" width="900" alt="Swagger UI"/>
-</p>
-
----
-
-### 🔹 User Registration
-<p align="center">
-  <img src="Screenshots/register.png" width="900" alt="User Registration"/>
-</p>
-
----
-
-### 🔹 User Login (JWT Token)
-<p align="center">
-  <img src="Screenshots/login.png" width="900" alt="User Login"/>
-</p>
-
----
-
-### 🔹 Get All Tasks
-<p align="center">
-  <img src="Screenshots/get-all-tasks.png" width="900" alt="Get All Tasks"/>
-</p>
+* Microsoft SQL Server
+* Entity Framework Core
+* Code First
+* EF Core Migrations
+* Relational database design
 
 ---
 
-### 🔹 Create Task
-<p align="center">
-  <img src="Screenshots/create-task.png" width="900" alt="Create Task"/>
-</p>
+# 🏗️ Architecture
+
+The project follows a layered architecture designed to keep business logic separated from infrastructure and presentation concerns.
+
+```text
+SoftwareHouseERP
+│
+├── Backend
+│   │
+│   ├── API
+│   │   ├── Controllers
+│   │   ├── Middleware
+│   │   └── Configuration
+│   │
+│   ├── Application
+│   │   ├── Features
+│   │   ├── DTOs
+│   │   ├── Commands
+│   │   ├── Queries
+│   │   └── Handlers
+│   │
+│   ├── Domain
+│   │   ├── Entities
+│   │   ├── Enums
+│   │   └── Interfaces
+│   │
+│   └── Infrastructure
+│       ├── Data
+│       ├── Repositories
+│       ├── Identity
+│       └── Services
+│
+└── Frontend
+    │
+    ├── src
+    │   ├── app
+    │   │   ├── core
+    │   │   ├── services
+    │   │   ├── guards
+    │   │   ├── interceptors
+    │   │   ├── features
+    │   │   └── shared
+    │   │
+    │   └── assets
+    │
+    └── angular.json
+```
+
+> The actual folder structure may vary depending on the current project implementation.
 
 ---
 
-### 🔹 Update Task
-<p align="center">
-  <img src="Screenshots/update-task.png" width="900" alt="Update Task"/>
-</p>
+# 🔄 Application Flow
+
+```text
+Angular Frontend
+       │
+       │ HTTP / REST API
+       ▼
+ASP.NET Core Web API
+       │
+       ├── Authentication / Authorization
+       │
+       ├── Controllers
+       │
+       ├── MediatR / CQRS
+       │
+       ├── Application Services
+       │
+       └── Entity Framework Core
+                    │
+                    ▼
+              SQL Server
+```
 
 ---
 
-### 🔹 Delete Task
-<p align="center">
-  <img src="Screenshots/delete-task.png" width="900" alt="Delete Task"/>
-</p>
+# 🔐 Security
+
+The application implements authentication and authorization using:
+
+* ASP.NET Core Identity
+* JWT Bearer Authentication
+* Role-Based Authorization
+* Secure API endpoints
+* Protected Angular routes
+* HTTP Authentication Interceptor
+* Route Guards
+
+Example roles:
+
+```text
+Admin
+User
+```
+
+Additional roles can be introduced depending on business requirements.
 
 ---
 
-### 🔹 JWT Token
-<p align="center">
-  <img src="Screenshots/JWT Token.png" width="900" alt="File Upload"/>
-</p>
+# 📦 Main ERP Modules
+
+```text
+Dashboard
+│
+├── Employees
+│
+├── Departments
+│
+├── Clients
+│
+├── Projects
+│   ├── Project Details
+│   ├── Tasks
+│   └── Milestones
+│
+├── HR
+│   ├── Attendance
+│   └── Leave Requests
+│
+├── Finance
+│   ├── Contracts
+│   ├── Invoices
+│   ├── Payments
+│   └── Expenses
+│
+└── Reports
+```
 
 ---
 
-### 🔹 get by id task
-<p align="center">
-  <img src="Screenshots/get by id.png" width="900" alt="Database"/>
-</p>
+# 🚀 Getting Started
+
+## Prerequisites
+
+Before running the project, make sure you have:
+
+* .NET SDK
+* SQL Server
+* Visual Studio 2022 or later
+* Node.js
+* Angular CLI
+* Git
+
+Check your installed versions:
+
+```bash
+dotnet --version
+node --version
+npm --version
+ng version
+```
 
 ---
 
-## 🎯 What This Project Demonstrates
+# ⚙️ Backend Setup
 
-- Building production-style RESTful APIs
-- Implementing secure authentication systems (JWT + Identity)
-- Applying CQRS pattern in real-world scenarios
-- Designing scalable backend architecture
-- Enforcing clean code and separation of concerns
-- Handling user-based authorization logic
+### 1. Clone the repository
+
+```bash
+git clone https://github.com/ahmedsaeeddev5-alt/SoftwareHouse-ERP.git
+```
+
+### 2. Navigate to the backend project
+
+```bash
+cd SoftwareHouse-ERP
+```
+
+Navigate to the ASP.NET Core API project directory according to the project structure.
+
+### 3. Configure SQL Server
+
+Update the connection string in your local configuration:
+
+```json
+{
+  "ConnectionStrings": {
+    "DefaultConnection": "Server=.;Database=SoftwareHouseERPDb;Trusted_Connection=True;TrustServerCertificate=True;"
+  }
+}
+```
+
+> Do not commit production credentials, passwords, API keys, or other sensitive configuration values to GitHub.
+
+### 4. Apply EF Core migrations
+
+```bash
+dotnet ef database update
+```
+
+### 5. Run the API
+
+```bash
+dotnet run
+```
+
+The API will be available through the configured local HTTP/HTTPS ports.
 
 ---
 
-## 🚀 Future Improvements
+# 🌐 Frontend Setup
 
-- Refresh Token implementation
-- Unit & Integration testing (xUnit)
-- Caching layer (Redis)
-- Rate limiting & throttling
-- Background jobs (Hangfire)
-- Advanced logging (Serilog + ElasticSearch)
+Navigate to the Angular application:
+
+```bash
+cd frontend
+```
+
+Install dependencies:
+
+```bash
+npm install
+```
+
+Run the development server:
+
+```bash
+ng serve
+```
+
+Open:
+
+```text
+http://localhost:4200
+```
 
 ---
 
-## 💡 Key Takeaway
+# 📖 API Documentation
 
-> “A strong backend system is not just functional — it is secure, scalable, and built with clear architectural boundaries.”
+The backend provides interactive API documentation through **Swagger / OpenAPI**.
+
+After starting the ASP.NET Core API, open:
+
+```text
+/swagger/index.html
+```
+
+Swagger can be used to:
+
+* Explore available endpoints
+* Test API requests
+* Review request/response models
+* Test authentication-protected endpoints
 
 ---
 
-<p align="center">
-🚀 Built with focus on enterprise-grade backend development and real-world system design
-</p>
+# 🧪 API Testing
+
+The API can be tested using:
+
+* Swagger
+* Postman
+
+Typical authentication flow:
+
+```text
+Register
+   ↓
+Login
+   ↓
+Receive JWT
+   ↓
+Send JWT with API requests
+   ↓
+Access protected endpoints
+```
+
+Example:
+
+```http
+Authorization: Bearer <JWT_TOKEN>
+```
+
+---
+
+# 📁 Project Structure
+
+A simplified representation of the application:
+
+```text
+SoftwareHouseERP/
+│
+├── Backend/
+│   ├── Controllers/
+│   ├── Data/
+│   ├── Models/
+│   ├── DTOs/
+│   ├── Services/
+│   ├── Features/
+│   ├── Repositories/
+│   ├── Migrations/
+│   └── Program.cs
+│
+├── Frontend/
+│   ├── src/
+│   │   └── app/
+│   │       ├── core/
+│   │       ├── services/
+│   │       ├── guards/
+│   │       ├── interceptors/
+│   │       ├── features/
+│   │       └── shared/
+│   │
+│   ├── angular.json
+│   ├── package.json
+│   └── tsconfig.json
+│
+├── .gitignore
+└── README.md
+```
+
+---
+
+# 🎨 UI & UX
+
+The application follows a modern ERP dashboard design approach:
+
+* Responsive layout
+* Clean navigation
+* Consistent color and spacing system
+* Bootstrap Icons
+* Responsive tables
+* Modern forms
+* Status badges
+* Loading states
+* Error handling
+* Empty states
+* Mobile-friendly layouts
+* Reusable UI patterns
+
+The interface is designed to provide a professional business-management experience rather than a basic CRUD application.
+
+---
+
+# 📈 Future Improvements
+
+Planned improvements may include:
+
+* Advanced reporting
+* Export reports to PDF / Excel
+* Advanced dashboard analytics
+* Notification system
+* Email notifications
+* Audit logging
+* Advanced search and filtering
+* Pagination improvements
+* File/document management
+* Role and permission management
+* Deployment using Docker
+* CI/CD pipeline
+* Cloud deployment
+
+---
+
+# 🎯 Project Goals
+
+This project was built to demonstrate practical experience with:
+
+* Full-Stack .NET development
+* RESTful API development
+* Angular application development
+* SQL Server database design
+* Entity Framework Core
+* Authentication and authorization
+* CQRS and MediatR
+* Clean and maintainable architecture
+* Dependency Injection
+* Repository Pattern
+* SOLID principles
+* Responsive UI development
+* Real-world ERP business workflows
+
+---
+
+# 👨‍💻 Author
+
+## Ahmed Saeed Reiyd
+
+**Full-Stack .NET Developer**
+
+Specialized in:
+
+```text
+ASP.NET Core
+C#
+Web API
+Angular
+Entity Framework Core
+SQL Server
+TypeScript
+REST APIs
+JWT Authentication
+CQRS / MediatR
+```
+
+### GitHub
+
+https://github.com/ahmedsaeeddev5-alt
+
+### LinkedIn
+
+https://www.linkedin.com/in/ahmed-saeed-928884199/
+
+---
+
+# ⭐ Support
+
+If you find this project useful or interesting, consider giving the repository a ⭐ on GitHub.
+
+---
+
+## 📄 License
+
+This project is intended for educational and portfolio purposes.
