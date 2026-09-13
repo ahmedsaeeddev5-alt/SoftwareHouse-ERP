@@ -6,32 +6,6 @@
 
 ---
 
-## 📸 Screenshots
-
-> Add your project screenshots here.
-
-### Dashboard
-
-![Dashboard](docs/screenshots/dashboard.png)
-
-### Employees
-
-![Employees](docs/screenshots/employees.png)
-
-### Projects
-
-![Projects](docs/screenshots/projects.png)
-
-### Tasks
-
-![Tasks](docs/screenshots/tasks.png)
-
-### Finance
-
-![Finance](docs/screenshots/finance.png)
-
----
-
 ## ✨ Key Features
 
 ### 🔐 Authentication & Authorization
