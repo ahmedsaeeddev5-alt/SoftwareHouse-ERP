@@ -1,9 +1,10 @@
 ﻿using MediatR;
 using Task_Management_API.Data.Dtos;
-using Task_Management_API.Data.Models;
 
 namespace Task_Management_API.CQRS.Commands
 {
-    public record InsertItemCommand(TaskItemCreateDto Item , string UserId) : IRequest<TaskItemReadDto>;
-
+    public record InsertItemCommand(
+        TaskItemCreateDto Item,
+        string UserId)
+        : IRequest<TaskItemReadDto>;
 }

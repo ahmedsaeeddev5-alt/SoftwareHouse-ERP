@@ -1,0 +1,182 @@
+Software House ERP
+│
+├── Identity & Users
+│
+├── Departments
+│   ├── Backend
+│   ├── Frontend
+│   ├── QA
+│   ├── UI/UX
+│   └── HR
+│
+├── Employees
+│
+├── Clients
+│
+├── Projects
+│   ├── Project Details
+│   ├── Project Team
+│   ├── Tasks
+│   ├── Milestones مراحل المشروع
+│   └── Project Status
+│
+├── Project Management
+│   ├── Tasks
+│   
+│   
+│  
+│
+├── Contracts     العقود
+│
+├── Invoices & Payments
+│
+├── Expenses    المصروفات
+│
+├── HR
+│   ├── Attendance
+│   ├── Leave Requests
+│   └── Salaries
+│
+└── Reports
+
+
+
+Phase 1
+Identity
+Department
+Employee
+        ↓
+Phase 2
+Client
+Project
+ProjectMember
+        ↓
+Phase 3
+Task Management
+Milestones مراحل المشروع
+        ↓
+Phase 4
+Contracts
+Invoices
+Payments
+Expenses المصروفات
+        ↓
+Phase 5
+HR
+Attendance
+Leave
+        ↓
+Phase 6
+Reports
+        ↓
+Phase 7
+Angular Dashboard
+
+
+Client Module , Employee Module , Department Module , Project Module , Project Members Module , Task Module
+  
+│
+├── Model
+│   └── Client
+│
+├── DTOs
+│   ├── ClientDto
+│   ├── CreateClientDto
+│   └── UpdateClientDto
+│
+├── Repository
+│   ├── IClientRepository
+│   └── ClientRepository
+│
+├── CQRS
+│   ├── Commands
+│   │   ├── CreateClientCommand
+│   │   ├── UpdateClientCommand
+│   │   └── DeleteClientCommand
+│   │
+│   ├── Queries
+│   │   ├── GetClientsQuery
+│   │   └── GetClientByIdQuery
+│   │
+│   └── Handlers
+│       ├── CreateClientHandler
+│       ├── UpdateClientHandler
+│       ├── DeleteClientHandler
+│       ├── GetClientsHandler
+│       └── GetClientByIdHandler
+│
+└── Controller
+    └── ClientsController
+
+
+
+Client
+   │
+   └── Projects
+          │
+          ├── Project Members
+          │      └── Employees
+          │
+          └── Tasks
+                 └── Employees
+
+Client: ABC Company
+
+    Project: E-Commerce Platform
+        │
+        ├── Ahmed → Backend Developer
+        ├── Mohamed → Frontend Developer
+        └── Sara → QA
+
+        Tasks:
+        ├── Create Authentication API
+        ├── Build Product Module
+        ├── Create Angular Dashboard
+        └── Test Checkout
+
+
+Software House ERP
+│
+├── Clients ✅
+├── Departments ✅
+├── Employees ✅
+│
+└── Project Management
+    ├── Projects  ← نبدأ هنا
+    ├── Project Members
+    └── Tasks
+
+Department
+    │
+    └── Employees
+           │
+           ├── AppUser
+           │
+           ├── ProjectMembers
+           │       └── Projects
+           │
+           └── Tasks
+
+1️⃣ Project Report
+   ├── Projects Summary
+   ├── Project Status
+   └── Project Members
+
+2️⃣ Financial Reports
+   ├── Contracts Summary
+   ├── Invoices Summary
+   ├── Payments Summary
+   └── Expenses Summary
+
+3️⃣ HR Reports
+   ├── Attendance Summary
+   └── Leave Summary
+
+4️⃣ Dashboard
+   ├── Total Projects
+   ├── Total Clients
+   ├── Total Contracts
+   ├── Total Invoices
+   ├── Total Payments
+   ├── Total Expenses
+   └── Total Employees
